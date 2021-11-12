@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakerLib", "..\FakerLib\FakerLib.csproj", "{A4C3C28D-5F47-4289-8E33-CEA36DB0B2B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FakerImpl", "..\FakerLib\FakerImpl.csproj", "{A4C3C28D-5F47-4289-8E33-CEA36DB0B2B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFaker", "..\TestFaker\TestFaker.csproj", "{4249D96C-2096-4AC9-AFC5-6D788389AF6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "..\TestFaker\Test.csproj", "{4249D96C-2096-4AC9-AFC5-6D788389AF6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

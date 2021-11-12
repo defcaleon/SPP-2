@@ -1,8 +1,9 @@
-﻿using System;
+﻿using FakerLib;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace FakerLib
+namespace FakerApp
 {
     public class Faker
     {
@@ -10,9 +11,7 @@ namespace FakerLib
         private Dictionary<Type, ISimpleTypeGenerator> simpleTypeGenerator;
         private Dictionary<Type, IGenericGenerator> genericTypeGenerator;
         private List<Type> generatedTypesInClass;
-        private Dictionary<PropertyInfo, ISimpleTypeGenerator> customTypeGenerator = new Dictionary<PropertyInfo, ISimpleTypeGenerator>();
-
-
+       
         public Faker()
         {
             this.simpleTypeGenerator = SimpleTypesCreator.getSimpleTypes();
@@ -59,7 +58,6 @@ namespace FakerLib
             }
             else if (type.IsGenericType && genericTypeGenerator.TryGetValue(type.GetGenericTypeDefinition(), out IGenericGenerator genCreator))
             {
-                //createdObject = genCreator.Create(type.GenericTypeArguments[0]);
                 createdObject = genCreator.Create(type.GenericTypeArguments[0]);
             }
             else if (type.IsClass && 
@@ -220,6 +218,6 @@ namespace FakerLib
             }
         }
 
-
+        private Dictionary<PropertyInfo, ISimpleTypeGenerator> customTypeGenerator = new Dictionary<PropertyInfo, ISimpleTypeGenerator>();
     }
 }
